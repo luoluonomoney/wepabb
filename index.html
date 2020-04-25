@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+		<script src="js/adaptive.js"></script>
+		<script>
+			window['adaptive'].desinWidth = 750; // 设计图宽度
+			window['adaptive'].baseFont = 32; // 没有缩放时的字体大小
+			window['adaptive'].maxWidth = 480; // 页面最大宽度 默认540
+			window['adaptive'].init(); // 调用初始化方法
+		</script>
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="zgift">
+				<img src="img/5.png" />
+			</div>
+			<div class="num">剩余抽签次数：<span>3</span>次</div>
+			<div class="mark">
+				<ul>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+					<li class="mark-item"><img src="img/9.png" /></li>
+				</ul>
+			</div>
+			<div class="note">
+				<div class="people">
+				</div>
+			</div>
+			<div class="bang">2019新年福气榜</div>
+			<div class="charts">
+				<div class="border">
+					<div class="head ph">
+						<ul class="flex">
+							<li>排名</li>
+							<li>头像</li>
+							<li>昵称</li>
+							<li>福卡数</li>
+						</ul>
+					</div>
+					<div class="main ph">
+						<ul class="flex">
+							<li><img src="img/17.png" /></li>
+							<li><img src="img/11.jpg" /></li>
+							<li>一直小可爱</li>
+							<li>423423</li>
+						</ul>
+						<ul class="flex">
+							<li><img src="img/18.png" /></li>
+							<li><img src="img/11.jpg" /></li>
+							<li>一直小可爱</li>
+							<li>423423</li>
+						</ul>
+						<ul class="flex">
+							<li><img src="img/19.png" /></li>
+							<li><img src="img/11.jpg" /></li>
+							<li>一直小可爱</li>
+							<li>423423</li>
+						</ul>
+						<ul class="flex">
+							<li>4</li>
+							<li><img src="img/11.jpg" /></li>
+							<li>一直小可爱</li>
+							<li>423423</li>
+						</ul>
+						<ul class="flex">
+							<li>5</li>
+							<li><img src="img/11.jpg" /></li>
+							<li>一直小可爱</li>
+							<li>423423</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="m-footer flex">
+					<div class="current-name flex">
+						<div class="current"><img src="img/11.jpg" /></div>
+						<div class="">
+							<p>当前主播</p>
+							<p class="name">来日可期</p>
+						</div>
+					</div>
+					<div>888</div>
+				</div>
+				<div class="bc"></div>
+			</div>
+			<div class="bang">活动规则</div>
+			<div class="rules">
+				<div class="border">
+					<p>1、活动期间，用户每累计充值1元可抽取新年签一次(可无限叠加)；</p>
+					<p>2、新年签中有惊喜哦，不仅有丰富多采的奖品、逗米相送，还能抽取限量新春礼物—新年福卡一张；</p>
+					<p>3、把限量福卡送给心仪的主播，将会在当前直播间随机送出对主播的专属2019新年祝福语；</p>
+					<p>4、主播按收到福卡个数进行排名，1福卡=100福金币；</p>
+					<p>5、福气第一的主播将奖励xxxx；</p>
+					<p>6、福气第二的主播将奖励xxxx；</p>
+					<p>7、福气第三的主播将奖励xxxx；</p>
+				</div>
+				<div class="bc"></div>
+			</div>
+			<p class="act">本活动最终解释权归逗播所有</p>
+			<!--充值弹窗-->
+			<div class="bg"></div>
+			<div class="layout-cz">
+				<p>对不起，您的抽签次数已用完。</p>
+				<div class="btn"></div>
+			</div>
+
+			<!--奖品弹窗-->
+			<div class="layout-jp">
+				<p class="p1">2019新年上上签</p>
+				<p class="p2">非一般自由</p>
+				<div class="jp flex">
+					<div>
+						<img src="img/7.png" />
+						<p>法拉利</p>
+					</div>
+					<div>
+						<img src="img/4.png" />
+						<p>福卡</p>
+					</div>
+				</div>
+				<div class="btn cz"></div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			//			$(".nz").each(function() {
+			//				if($(this).text().length > 5) {
+			//					$(this).text($(this).text().slice(0, 5) + '...')
+			//				}
+			//			})
+			var timer = null;
+			$(".mark-item").click(function() {
+				$(".mark-item").removeClass('dd');
+				$(this).addClass('dd');
+				var that = this;
+				timer = setTimeout(function() {
+					$(".bg").show();
+					$(".layout-jp").show();
+					$(that).removeClass('dd');
+				}, 1300)
+			});
+			$(".cz").click(function() {
+				$(".bg").hide();
+				$(".layout-jp").hide();
+			})
+			$(".zgift").click(function() {
+				$('body,html').animate({
+					scrollTop: $(".act").offset().top
+				}, 800);
+			})
+
+			//note
+			var noteTimer = null;
+			var arr = ['恭喜11', '恭喜22', '恭喜33', '恭喜44', '恭喜55', ]
+			var index = 0;
+			$.each(arr, function(i, n) {
+				$(".people").append('<p>'+ n +'</p>');
+			});
+			$(".people").append('<p>'+ arr[0] +'</p>')
+			var hei = $(".people").height();
+			var bHei = $(".note").height();
+			clearInterval(noteTimer);
+			$(".people").append('')
+			noteTimer = setInterval(function() {
+				index -= 1;
+				if(-index > hei - bHei) {
+					index = 0;
+				}
+				$(".people").css({
+					top: index
+				})
+			}, 50)
+		})
+	</script>
+
+</html>
